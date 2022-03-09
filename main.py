@@ -24,14 +24,7 @@ def write(op, sp, c, p, nt, program, gt):
         gt = lex.get_token()
         print(c)
         print(sp)
-        # print(sp[0+1])
-        # if sp 
-        # sp[c] = p
-        # print(a)
-        # print(nt)
         
-            
-        # print(c - p)
 def sim(program):
     key = ''
     whitespace = ' '

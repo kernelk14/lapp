@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+
+from shlex import *
+import re
+import os
+import sys
+filename = "si.txt"
+key = ''
+whitespace = ' '
+with open(filename, "r") as f:
+    program = f.read()
+
+tokens = ['var', 'write']
+keywords = ['"', ';', '=']
+print(program)
+words = tokens + keywords
+lex = shlex(program)
+for pr in program:
+    nt = lex.get_token()
+    rt = lex.read_token()
+    # if nt = 'var':
+    # print(lex)        
+    print(nt)
