@@ -18,12 +18,14 @@ sp = split(program)
 # print(sp)
 # print()
 def write(op, sp, c, p, nt, program, gt):    
-    if sp[0] == 'write':            
+    if sp[0] == 'write':
+        print(nt)
         lex.push_token(gt)
         # a = lex.pop_token()
         gt = lex.get_token()
-        print(c)
-        print(sp)
+        # print(c)
+        # c += 1
+        # print(sp)
         
 def sim(program):
     key = ''
@@ -49,10 +51,13 @@ def sim(program):
             # print(nt)
             # print(gt)
         else:
-            if sp[0] == 'write':            
-                lex.push_token(gt)
-                # return write(op, sp, c, p, nt, program, gt)
-                print(sp[c])
+            if sp[0] == 'write':
+                # c += 1
+                # print(nt)
+                # lex.push_token(gt)
+                # print(gt)
+                return write(op, sp, c, p, nt, program, gt)
+                #print(sp[c])
                 c += 1
                 # break
 sim(program)
